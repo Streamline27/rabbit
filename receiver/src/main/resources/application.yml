@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /receiver
+  port: 9081
+
+spring:
+  rabbitmq:
+    listener:
+      simple:
+        retry:
+          max-attempts: 3
