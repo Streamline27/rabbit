@@ -8,8 +8,13 @@ import org.springframework.stereotype.Component
 class Consumer {
     val LOG = LoggerFactory.getLogger(Consumer::class.java)
 
-    @RabbitListener(queues = ["hello-world"])
-    fun receiveMessage(message: String) {
-        LOG.warn(message)
+    @RabbitListener(queues = ["q.rabbit.simple-direct"])
+    fun getFromSimpleDirectQueue(message: String) {
+        LOG.warn("Consumed message from queue:[q.rabbit.simple-direct], message:[$message]")
+    }
+
+    @RabbitListener(queues = ["q.rabbit.after-delay-destination"])
+    fun getFromAfterDelayDestinationQueue(message: String) {
+        LOG.warn("Consumed message from queue:[q.rabbit.after-delay-destination], message:[$message]")
     }
 }

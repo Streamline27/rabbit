@@ -1,7 +1,8 @@
 # http://localhost:15672
 # guest/guest
 rabbitmq:
-  image: rabbitmq:management
+  image: "rabbitmq:3-management"
+  container_name: "rabbitmq.broker"
   ports:
     - "5672:5672"
     - "15672:15672"

@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  rabbit.producer:
+    build: .
+    image: streamline27/rabbit.producer:latest
+    container_name: rabbit.producer
+    ports:
+      - "9080:9080"
+    environment:
+      - "spring.profiles.active=docker"
+      - "RABBIT_VIRTUAL_HOST=/"
+      - "RABBIT_HOST=localhost"
+      - "RABBIT_PORT=5672"
+      - "RABBIT_USERNAME=guest"
+      - "RABBIT_PASSWORD=guest"
+#    volumes:
+#      - "/Users/Vladislav/Development/Home/Kotlin/logs:/logs"
