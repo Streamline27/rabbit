@@ -1,6 +1,5 @@
 spring:
   rabbitmq:
-    port: ${RABBIT_PORT}
+    addresses: ${RABBIT_ADDRESSES}
     username: ${RABBIT_USERNAME}
     password: ${RABBIT_PASSWORD}
-    addresses: ${RABBIT_ADDRESSES}
