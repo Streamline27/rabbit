@@ -8,9 +8,7 @@ services:
       - "9080:9080"
     environment:
       - "spring.profiles.active=docker"
-      - "RABBIT_VIRTUAL_HOST=/"
-      - "RABBIT_HOST=localhost"
-      - "RABBIT_PORT=5672"
+      - "RABBIT_ADDRESSES=localhost:5672"
       - "RABBIT_USERNAME=guest"
       - "RABBIT_PASSWORD=guest"
 #    volumes:
